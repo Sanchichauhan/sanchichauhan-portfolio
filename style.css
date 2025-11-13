@@ -162,6 +162,7 @@ img {
 }
 .nav-list {
     display: flex;
+    align-items: center; /* This vertically centers the links/buttons */
     gap: 2.5rem;
 }
 .nav-link {
@@ -199,6 +200,24 @@ img {
     display: none;
     color: var(--text-dark);
 }
+
+/* === CSS FOR RESUME BUTTON === */
+.nav-link-resume {
+    background: var(--bg-light);
+    color: var(--primary-color);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50px;
+    border: 2px solid var(--border-color);
+    transition: all 0.3s ease;
+    font-weight: 700;
+}
+.nav-link-resume:hover {
+    background: var(--bg-off-white);
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+/* ================================== */
+
 
 /* ======== 3. HOME/HERO SECTION ======== */
 .hero {
@@ -351,6 +370,63 @@ img {
     position: absolute;
     left: 0;
     top: 2px;
+}
+
+/* ======== 5.5 CERTIFICATIONS SECTION ======== */
+/* This style is almost identical to the skills section */
+
+#certifications {
+    background: var(--bg-off-white); /* Matches the skills section */
+}
+
+.cert-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.cert-card {
+    background: var(--bg-light);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--card-shadow);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    
+    /* Use flex to push the link to the bottom */
+    display: flex;
+    flex-direction: column;
+}
+
+.cert-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--card-shadow-hover);
+}
+
+.cert-icon {
+    font-size: 2.5rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.cert-content {
+    /* This makes the content grow and push the link down */
+    flex-grow: 1; 
+}
+
+.cert-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--text-dark);
+    font-family: var(--font-body); /* Use body font for a cleaner look */
+    font-weight: 700;
+}
+
+.cert-issuer {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
 }
 
 /* ======== 6. PROJECTS SECTION ======== */
